@@ -1,0 +1,193 @@
+/* =================
+  Layout/Header
+  ================== */
+
+.header
+  position: relative
+  z-index: 1
+  min-height: 150px
+  background: url('../images/header-bg.png') repeat-x
+
+  &-banner
+    padding: 25px 20px 10px
+    &:after
+      content: ''
+      display: block
+      clear: both
+
+  &-user
+    float: left
+    width: 25%
+    text-align: center
+    &-avatar
+      vertical-align: middle
+      display: inline-block
+      width: 50px
+      height: 50px
+      overflow: hidden
+      border-bottom: none
+      img
+        border-radius: 50%
+    &-name
+      position: relative
+      vertical-align: middle
+      display: inline-block
+      font-size: 15px
+      margin-left: 11px
+      max-width: 155px
+      &-text
+        text-decoration: none
+        color: #FFFFFF
+        border-bottom: 1px dotted
+        border-bottom-color: rgba(255,255,255,.3)
+        font-size: 1em
+        line-height: 1.1
+        outline: 0
+      &-count
+        background: $decoration-background-color
+        color: $header-text-color
+        font-family: $alternate-font
+        font-weight: 700
+        position: absolute
+        bottom: 100%
+        left: 100%
+        padding: 2px 4px
+        transform: skew(-10deg)
+        font-size: 13px
+
+  &-logo
+    float: left
+    width: 50%
+    text-align: center
+
+  &-mode
+    float: right
+    width: 25%
+    min-width: 220px
+    .mode-item
+      margin-top: -25px
+      font-family: $base-font
+      font-weight: 600
+      font-size: 14px
+      color: $header-text-color
+      text-decoration: none
+      display: block
+      transform: skew(-8deg)
+      float: right
+      padding: 10px 15px
+      &-text
+        transform: skew(8deg)
+        border-bottom: 1px solid
+        border-bottom-color: rgba(255,255,255,.3)
+      &.active
+        background: $decoration-background-color
+        .mode-item-text
+          border-bottom: none
+          border-bottom-color: none
+
+  &-menu
+    padding: 0 20px
+    overflow: hidden
+    margin-bottom: -6px
+    &:after
+      content: ''
+      display: block
+      clear: both
+
+  &-map
+    width: 16%
+    display: block
+    float: left
+    margin-left: -25px
+    z-index: 2
+    min-width: 160px
+    &-link
+      display: block
+      float: left
+      background: $decoration-background-color
+      font-size: 16px
+      text-decoration: none
+      padding: 13px 17px
+      outline: 0
+      transform: skew(-8deg)
+      &:before
+        content: ''
+        display: inline-block
+        +sprite(0, -1128px)
+        width: 20px
+        height: 25px
+        vertical-align: middle
+        transform: skew(8deg)
+        margin: 0 5px
+      &-text
+        display: inline-block
+        color: #FFFFFF
+        border-bottom: 1px dotted
+        border-bottom-color: rgba(255,255,255,.3)
+        transform: skew(8deg)
+        vertical-align: middle
+
+  &-navigation
+    width: 64%
+    display: block
+    float: left
+    text-align: center
+    &-list
+      display: inline-block
+      .navigation-item
+        float: left
+        padding: 13px 10px
+        &-link
+          text-decoration: none
+          outline: 0
+          color: #FFFFFF
+          border-bottom: 1px dotted
+          border-bottom-color: rgba(255,255,255,.3)
+
+  &-search
+    width: 20%
+    display: block
+    float: left
+    text-align: right
+    &-form
+      width: 200px
+      display: inline-block
+      line-height: 40px
+      height: 40px
+      padding: 0
+      margin: 0 -25px 0 0
+      position: relative
+      &-input
+        box-sizing: border-box
+        width: 200px
+        padding: 5px 30px 5px 15px
+        border: 1px solid #414042
+        background-color: transparent
+        box-shadow: none
+        outline: 0
+        margin: 0
+        border-radius: 4px
+        &:focus
+          background-color: #FFFFFF
+      &-submit
+        position: absolute
+        right: 9px
+        top: 50%
+        margin-top: -12px
+        border: none
+        width: 30px
+        height: 26px
+        background-color: transparent
+        text-indent: 9999em
+        cursor: pointer
+        overflow: hidden
+        opacity: .5
+        &:before
+          +sprite(0, -958px)
+          content: ''
+          position: absolute
+          top: 50%
+          left: 50%
+          margin: -7px 0 0 -7px
+          width: 14px
+          height: 14px

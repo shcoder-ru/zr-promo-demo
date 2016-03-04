@@ -1,0 +1,18 @@
+/* =================
+  Base/Mixins
+  ================== */
+
+=font-face($family, $style, $weight, $file, $unicodeRange)
+  $fontpath: '../fonts/'
+  $fonttype: 'woff2'
+  @font-face
+    font-family: '#{$family}'
+    font-style: '#{$style}'
+    font-weight: '#{$weight}'
+    src: local('PT Sans'), url(#{$fontpath + $file + '.' + $fonttype}) format('#{$fonttype}')
+    unicode-range: '#{$unicodeRange}'
+
+=sprite($x, $y)
+  background-image: url(../images/sprites.png)
+  background-repeat: no-repeat
+  background-position: #{$x} #{$y}
