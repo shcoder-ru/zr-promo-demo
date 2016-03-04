@@ -8,7 +8,6 @@ apt-get install gcc g++ make
 ```
 ##### Install node    
 ``` sh
-cd /home/www/seawar2.com/tmp
 NODEVERSION=4.3.2
 wget http://nodejs.org/dist/v$NODEVERSION/node-v$NODEVERSION.tar.gz
 tar xvfz node-v$NODEVERSION.tar.gz
