@@ -34,3 +34,5 @@ grunt build
 ##### Compression images    
 https://tinypng.com/
 
+##### Screenshot    
+![Screenshot](https://raw.githubusercontent.com/shcoder-ru/zr-promo-demo/master/Screenshot.png)
