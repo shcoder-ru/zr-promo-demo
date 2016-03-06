@@ -32,7 +32,7 @@
     <!--[if lt IE 9]><script src="/js/html5shiv.min.js"></script><![endif]-->
     <script src="/js/picturefill.min.js" async></script>
     <!-- <link rel="stylesheet" type="text/css" href="/css/style.css"> @ for develop -->
-    <link rel="stylesheet" type="text/css" href="/css/style.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.min.css"> <!-- @ for production -->
   </head>
   <body>
     <div class="main">
@@ -52,15 +52,15 @@
               <picture>
                 <source srcset="/images/logo.png 1x, /images/logo-large.png 2x">
                 <source media="(min-width:18em)" srcset="/images/logo-medium.jpg 1x, /images/logo-large.jpg 2x">
-                <img src="/images/logo.jpg" alt="За&nbsp;рулем" width="411" height="67">
+                <img src="/images/logo.jpg" alt="За&nbsp;рулем">
               </picture>
             </div>
             <div class="header-mode">
-              <a class="mode-item" href="#">
-                <div class="mode-item-text">Песочница</div>
-              </a>
               <a class="mode-item active" href="#">
                 <div class="mode-item-text">За&nbsp;рулем</div>
+              </a>
+              <a class="mode-item" href="#">
+                <div class="mode-item-text">Песочница</div>
               </a>
             </div>
           </div>
@@ -70,35 +70,37 @@
                 <div class="header-map-link-text">Весь сайт</div>
               </a>
             </div>
-            <nav class="header-navigation">
-              <ul class="header-navigation-list">
-                <li class="navigation-item">
-                  <a class="navigation-item-link" href="#">Новости</a>
-                </li>
-                <li class="navigation-item">
-                  <a class="navigation-item-link" href="#">Статьи</a>
-                </li>
-                <li class="navigation-item">
-                  <a class="navigation-item-link" href="#">Тесты</a>
-                </li>
-                <li class="navigation-item">
-                  <a class="navigation-item-link" href="#">Марки и&nbsp;модели
-                  </a>
-                </li>
-                <li class="navigation-item">
-                  <a class="navigation-item-link" href="#">Фото и&nbsp;видео</a>
-                </li>
-                <li class="navigation-item">
-                  <a class="navigation-item-link" href="#">Авторы</a>
-                </li>
-              </ul>
-            </nav>
             <div class="header-search">
               <form class="header-search-form" action="">
                 <input class="header-search-form-input" type="text" name="q" placeholder="Поиск по сайту">
                 <button type="submit" class="header-search-form-submit" title="Найти">Найти</button>
               </form>
             </div>
+            <nav class="header-navigation">
+              <div class="header-navigation-wrapper">
+                <ul class="header-navigation-list">
+                  <li class="navigation-item">
+                    <a class="navigation-item-link" href="#">Новости</a>
+                  </li>
+                  <li class="navigation-item">
+                    <a class="navigation-item-link" href="#">Статьи</a>
+                  </li>
+                  <li class="navigation-item">
+                    <a class="navigation-item-link" href="#">Тесты</a>
+                  </li>
+                  <li class="navigation-item">
+                    <a class="navigation-item-link" href="#">Марки и&nbsp;модели
+                    </a>
+                  </li>
+                  <li class="navigation-item">
+                    <a class="navigation-item-link" href="#">Фото и&nbsp;видео</a>
+                  </li>
+                  <li class="navigation-item">
+                    <a class="navigation-item-link" href="#">Авторы</a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
           </div>
         </div>
       </header>

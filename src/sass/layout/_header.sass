@@ -5,10 +5,13 @@
 .header
   position: relative
   z-index: 1
-  min-height: 150px
+  height: 150px
   background: url('../images/header-bg.png') repeat-x
 
   &-banner
+    box-sizing: border-box
+    height: 104px
+    overflow: hidden
     padding: 25px 20px 10px
     &:after
       content: ''
@@ -59,21 +62,25 @@
     float: left
     width: 50%
     text-align: center
+    picture
+      width: 411px
+      img
+        width: 411px
 
   &-mode
-    float: right
+    float: left
     width: 25%
     min-width: 220px
+    margin-top: -25px
+    text-align: right
     .mode-item
-      margin-top: -25px
       font-family: $base-font
       font-weight: 600
       font-size: 14px
       color: $header-text-color
       text-decoration: none
-      display: block
+      display: inline-block
       transform: skew(-8deg)
-      float: right
       padding: 10px 15px
       &-text
         transform: skew(8deg)
@@ -88,19 +95,17 @@
   &-menu
     padding: 0 20px
     overflow: hidden
-    margin-bottom: -6px
     &:after
       content: ''
       display: block
       clear: both
 
   &-map
-    width: 16%
+    width: 150px
     display: block
     float: left
     margin-left: -25px
     z-index: 2
-    min-width: 160px
     &-link
       display: block
       float: left
@@ -128,14 +133,13 @@
         vertical-align: middle
 
   &-navigation
-    width: 64%
     display: block
-    float: left
     text-align: center
+    overflow: hidden
     &-list
       display: inline-block
       .navigation-item
-        float: left
+        display: inline-block
         padding: 13px 10px
         &-link
           text-decoration: none
@@ -145,17 +149,15 @@
           border-bottom-color: rgba(255,255,255,.3)
 
   &-search
-    width: 20%
     display: block
-    float: left
+    float: right
     text-align: right
     &-form
-      width: 200px
       display: inline-block
       line-height: 40px
       height: 40px
       padding: 0
-      margin: 0 -25px 0 0
+      margin: 0
       position: relative
       &-input
         box-sizing: border-box
@@ -191,3 +193,113 @@
           margin: -7px 0 0 -7px
           width: 14px
           height: 14px
+
+@media screen and (max-width: 992px)
+  .header
+
+    &-banner
+      padding: 15px 20px 15px
+
+    &-user
+      width: 25%
+      &-avatar
+        display: block
+        margin: 0 auto 5px
+      &-name
+        margin-left: 0
+
+    &-mode
+      width: 15%
+      float: right
+      min-width: 100px
+      margin-top: 5px
+
+    &-navigation
+      height: 42px
+      &-wrapper
+        overflow-y: hidden
+        overflow-x: auto
+        padding-bottom: 25px
+      &-list
+        display: inline-block
+        white-space: nowrap
+        width: 100%
+        .navigation-item
+          display: inline-block
+          padding: 13px 10px
+
+    &-map
+      width: 80px
+      &-link
+        &-text
+          display: none
+
+    &-search
+      overflow: hidden
+      &-form
+        float: right
+        &-input
+          width: 40px
+          border: none
+          position: relative
+          z-index: 3
+          transition: z-index 1s, width 1s
+          &:focus
+            transition: z-index 0s, width 1s
+            z-index: 1
+            width: 200px
+        &-submit
+          z-index: 2
+
+@media screen and (max-width: 768px)
+  .header
+    height: 136px
+
+    &-banner
+      height: 90px
+      padding: 15px 10px 15px
+
+    &-user
+      text-align: left
+      position: relative
+      &-avatar
+        margin: 0
+      &-name
+        position: absolute
+        top: 0
+        left: 0
+        &-text
+          display: none
+        &-count
+          bottom: auto
+          left: 40px
+          top: 0
+
+    &-logo
+      float: left
+      text-align: right
+      picture
+        max-width: 100%
+        img
+          max-width: 100%
+
+    &-mode
+      .mode-item
+        padding: 8px 10px
+        &-text
+          font-size: 12px
+
+@media screen and (max-width: 480px)
+  .header
+
+    &-mode
+      width: 75%
+      float: right
+      min-width: 200px
+      margin-top: 5px
+      .mode-item
+        padding: 6px 10px
+
+    &-logo
+      float: right
+      width: 55%

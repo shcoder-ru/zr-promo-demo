@@ -16,3 +16,29 @@
   background-image: url(../images/sprites.png)
   background-repeat: no-repeat
   background-position: #{$x} #{$y}
+
+=keyframesMove($name, $startLeft, $startTop, $stopLeft, $stopTop)
+  @keyframes #{$name}
+    from
+      left: #{$startLeft}
+      top: #{$startTop}
+    to
+      left: #{$stopLeft}
+      top: #{$stopTop}
+
+=keyframesMoveFrom($name, $startLeft, $startTop)
+  @keyframes #{$name}
+    from
+      left: #{$startLeft}
+      top: #{$startTop}
+
+=keyframesMoveTo($name, $stopLeft, $stopTop)
+  @keyframes #{$name}
+    to
+      left: #{$stopLeft}
+      top: #{$stopTop}
+
+=keyframesRotate($name, $to)
+  @keyframes #{$name}
+    to
+      transform: rotate($to)
