@@ -34,6 +34,3 @@ grunt build
 ##### Compression images    
 https://tinypng.com/
 
-##### @TODO    
-animation    
-media queries (desktop, table, mobile)    

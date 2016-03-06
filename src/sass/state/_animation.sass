@@ -2,8 +2,54 @@
   State/Animation
   ================== */
 
-+keyframesMove('balls-to-start', -100px, 450px, -100px, 450px)
-+keyframesMove('move-balls', -60px, 450px, 50%, 450px)
-+keyframesMoveFrom('balls-to-end', 50%, 450px)
-+keyframesRotate(rotate-balls, 360deg)
++keyframesMove(balls-to-start, -100px, 450px, -100px, 450px)
++keyframesMove(move-balls, -60px, 450px, 65%, 450px)
++keyframesMove(balls-to-end, 65%, 450px, 75%, 300px)
++keyframesRotate(rotate-balls, 0deg, 360deg)
++keyframesRotateTo(rotate-phone-plus, 5deg)
++keyframesRotate(rotate-phone-minus, 5deg, -10deg)
++keyframesRotateTo(rotate-phone-stop, 0deg)
++keyframesBackgroundSize(lessening-car, 300%)
 
+.privilege-12
+  animation: balls-to-start 0s, move-balls 0.5s ease 1 0s, rotate-balls 0.1s linear 5 0s, balls-to-end 0.2s linear 1 0.5s
+
+.privilege-40
+  animation: balls-to-start 0.2s, move-balls 0.5s ease 1 0.2s, rotate-balls 0.1s linear 5 0.2s, balls-to-end 0.2s linear 1 0.7s
+
+.privilege-120
+  animation: balls-to-start 0.4s, move-balls 0.5s ease 1 0.4s, rotate-balls 0.1s linear 5 0.4s, balls-to-end 0.2s linear 1 0.9s
+
+.privilege-140
+  animation: balls-to-start 0.6s, move-balls 0.5s ease 1 0.6s, rotate-balls 0.1s linear 5 0.6s, balls-to-end 0.2s linear 1 1.1s
+
+.privilege-550
+  animation: balls-to-start 0.8s, move-balls 0.5s ease 1 0.8s, rotate-balls 0.1s linear 5 0.8s, balls-to-end 0.2s linear 1 1.3s
+
+.action-4-image
+  animation: rotate-phone-plus 0.05s linear 1 1.3s forwards, rotate-phone-minus 0.05s linear 10 1.35s alternate, rotate-phone-stop 0.05s linear 1 1.85s forwards,
+  &:hover, &:focus, &:active
+    animation: rotate-phone-plus 0.05s linear 1 1.3s forwards, rotate-phone-minus 0.05s linear infinite 1.35s alternate, rotate-phone-stop 0.05s
+
+.header
+  &-user, &-navigation
+    a
+      transition: color 0.1s, border-bottom-color 0.1s
+      &:hover
+        color: #E40025
+        border-bottom-color: #E40025
+
+.promo
+  animation: lessening-car 2s
+  .privilege
+    transition: transform 0.5s
+    &-content
+      visibility: hidden
+      opacity: 0
+      transition: opacity 0.5s
+    &:hover, &:focus, &:active
+      transform: rotate(360deg)
+      z-index: 10
+      .privilege-content
+        opacity: 1
+        visibility: visible

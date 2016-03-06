@@ -38,7 +38,19 @@
       left: #{$stopLeft}
       top: #{$stopTop}
 
-=keyframesRotate($name, $to)
+=keyframesRotateTo($name, $to)
   @keyframes #{$name}
     to
-      transform: rotate($to)
+      transform: rotate(#{$to})
+
+=keyframesRotate($name, $from, $to)
+  @keyframes #{$name}
+    from
+      transform: rotate(#{$from})
+    to
+      transform: rotate(#{$to})
+
+=keyframesBackgroundSize($name, $from)
+  @keyframes #{$name}
+    from
+      background-size: #{$from}
